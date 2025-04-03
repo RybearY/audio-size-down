@@ -34,14 +34,14 @@ def split_audio(file_path, target_size, output_dir, original_filename):
     return output_files
 
 def main():
-    st.title("오디오 파일 용량 조정 도구")
+    st.title("Audio File Size Adjustment Tool")
     st.write("오디오 파일을 지정된 크기로 분할하는 애플리케이션입니다.")
     
     # 목표 파일 크기 설정 (MB 단위)
-    target_size = st.number_input("목표 파일 크기 (MB)", min_value=1, value=29, step=1)
+    target_size = st.number_input("Target Size(목표 파일 크기) (MB)", min_value=1, value=29, step=1)
     
     # 파일 업로더
-    uploaded_files = st.file_uploader("오디오 파일 업로드 (여러 파일 선택 가능)", 
+    uploaded_files = st.file_uploader("File Upload (Multiple files available) 오디오 파일 업로드 (여러 파일 선택 가능)", 
                                      type=["mp3", "wav", "ogg", "flac"], 
                                      accept_multiple_files=True)
     
